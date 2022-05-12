@@ -1,9 +1,13 @@
 <template>
-  <Tutorial />
+    <Posts />
 </template>
 
 <script>
 export default {
-  name: 'IndexPage',
+    name: 'PostsPage',
+    layout: 'blog',
+    created() {
+        this.$store.commit('header/setTitle', 'Blog')
+    },
 }
 </script>
